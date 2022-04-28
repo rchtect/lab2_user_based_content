@@ -36,11 +36,11 @@ function Login() {
                   class="input input-bordered"
                 />
                 <label class="label">
-                  <p class="label-text-alt link link-hover">
+                  <p class="label-text-alt">
                     Don't have account?
                     <span>
                       <Link to="/signup">
-                        <span> Sign up</span>
+                        <span className="link-hover"> Sign up</span>
                       </Link>
                     </span>
                   </p>
