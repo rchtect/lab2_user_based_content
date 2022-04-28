@@ -18,11 +18,19 @@ function Signup() {
             <div class="card-body">
               <div class="form-control">
                 <label class="label">
+                  <span class="label-text">Username</span>
+                </label>
+                <input
+                  type="text"
+                  placeholder="Kawan"
+                  class="input input-bordered"
+                />
+                <label class="label">
                   <span class="label-text">Email</span>
                 </label>
                 <input
                   type="text"
-                  placeholder="isaaq@dev.io"
+                  placeholder="hello@kawium.dev"
                   class="input input-bordered"
                 />
               </div>
