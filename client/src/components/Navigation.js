@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 function Navigation() {
   return (
@@ -25,12 +26,29 @@ function Navigation() {
             tabindex="0"
             class="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52"
           >
-            <li>
-              <a>Homepage</a>
-            </li>
+            <Link to="/">
+              <li>
+                <a>Home</a>
+              </li>
+            </Link>
             <li>
               <a>Portfolio</a>
             </li>
+            <Link to="/app">
+              <li>
+                <a>Chat</a>
+              </li>
+            </Link>
+            <Link to="/login">
+              <li>
+                <a>Login</a>
+              </li>
+            </Link>
+            <Link to="/signup">
+              <li>
+                <a>Signup</a>
+              </li>
+            </Link>
             <li>
               <a>About</a>
             </li>
@@ -38,7 +56,9 @@ function Navigation() {
         </div>
       </div>
       <div class="navbar-center">
-        <a class="btn btn-ghost normal-case text-xl">eChat</a>
+        <Link to="/">
+          <a class="btn btn-ghost normal-case text-xl">eChat</a>
+        </Link>
       </div>
       <div class="navbar-end">
         <button class="btn btn-ghost btn-circle">
