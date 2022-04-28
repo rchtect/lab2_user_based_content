@@ -24,6 +24,7 @@ function Login() {
                   type="text"
                   placeholder="isaaq@dev.io"
                   class="input input-bordered"
+                  required
                 />
               </div>
               <div class="form-control">
@@ -34,6 +35,7 @@ function Login() {
                   type="password"
                   placeholder="password"
                   class="input input-bordered"
+                  required
                 />
                 <label class="label">
                   <p class="label-text-alt">
@@ -50,7 +52,9 @@ function Login() {
                 </label>
               </div>
               <div class="form-control mt-6">
-                <button class="btn btn-primary">Login</button>
+                <button class="btn btn-primary tooltip" data-tip="Login now">
+                  Login
+                </button>
               </div>
             </div>
           </div>

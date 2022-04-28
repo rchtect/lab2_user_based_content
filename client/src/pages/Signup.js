@@ -1,7 +1,15 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { useState } from "react";
+
+function handleSignup(e) {
+  e.preventDefault();
+}
 
 function Signup() {
+  const [email, putEmail] = useState("");
+  const [password, putPassword] = useState("");
+  const [username, putUsername] = useState("");
   return (
     <div>
       <div class="hero min-h-screen bg-base-200">
@@ -14,7 +22,10 @@ function Signup() {
               et a id nisi.
             </p>
           </div>
-          <div class="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
+          <div
+            class="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-base-100"
+            onSubmit={handleSignup}
+          >
             <div class="card-body">
               <div class="form-control">
                 <label class="label">
@@ -24,6 +35,9 @@ function Signup() {
                   type="text"
                   placeholder="Kawan"
                   class="input input-bordered"
+                  onChange={(e) => putUsername(e.target.value)}
+                  value={username}
+                  required
                 />
                 <label class="label">
                   <span class="label-text">Email</span>
@@ -32,6 +46,9 @@ function Signup() {
                   type="text"
                   placeholder="hello@kawium.dev"
                   class="input input-bordered"
+                  onChange={(e) => putEmail(e.target.value)}
+                  value={email}
+                  required
                 />
               </div>
               <div class="form-control">
@@ -42,6 +59,9 @@ function Signup() {
                   type="password"
                   placeholder="password"
                   class="input input-bordered"
+                  onChange={(e) => putPassword(e.target.value)}
+                  value={password}
+                  required
                 />
                 <label class="label">
                   <p class="label-text-alt">
@@ -58,7 +78,9 @@ function Signup() {
                 </label>
               </div>
               <div class="form-control mt-6">
-                <button class="btn btn-primary">Sign up</button>
+                <button class="btn btn-primary tooltip" data-tip="Sign up now">
+                  Sign up
+                </button>
               </div>
             </div>
           </div>
