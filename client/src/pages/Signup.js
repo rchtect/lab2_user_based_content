@@ -40,7 +40,10 @@ function Signup() {
                     Already have an account?
                     <span>
                       <Link to="/login">
-                        <span className="link-hover"> Sign in</span>
+                        <span className="link-hover text-blue-300">
+                          {" "}
+                          Sign in
+                        </span>
                       </Link>
                     </span>
                   </p>
