@@ -1,11 +1,14 @@
 const express = require("express");
 const cors = require("cors");
 const app = express();
-const channels = ["General", "Music", "Anime", "Business", "Self improvement"];
-
+const channels = ["General", "Music", "Business", "Fitness"];
+const userRoutes = require('./routes/userRoutes')
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 app.use(cors())
+
+app.use('/users', userRoutes)
+require('./connection')
 
 const server = require('http').createServer(app);
 const PORT = 8080
