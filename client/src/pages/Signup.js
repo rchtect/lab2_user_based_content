@@ -1,16 +1,23 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { useState } from "react";
-
-function handleSignup(e) {
-  e.preventDefault();
-  console.log("fuck")
-}
+import { useSignupUserMutation } from "../services/appApi";
 
 function Signup() {
   const [email, putEmail] = useState("");
   const [password, putPassword] = useState("");
   const [username, putUsername] = useState("");
+  const navigate = useNavigate();
+  const [signupUser, { isLoading, error }] = useSignupUserMutation();
+  function handleSignup(e) {
+    e.preventDefault();
+    signupUser({ username, email, password }).then(({ data }) => {
+      if (data) {
+        navigate('/app')
+      }
+    });
+  }
+
   return (
     <div>
       <div class="hero min-h-screen bg-base-200">

@@ -1,13 +1,22 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate} from "react-router-dom";
 import { useState } from "react";
+import {useLoginUserMutation} from '../services/appApi'
 
 function Login() {
   const [email, putEmail] = useState("");
   const [password, putPassword] = useState("");
-
+  const navigate = useNavigate();
+  const [loginUser,{isloading, error}] = useLoginUserMutation
   function handleLogin(e) {
     e.preventDefault();
+
+    loginUser({ email, password }).then(({ data }) => {
+      if (data) {
+        //socket should work here
+        navigate('/app')
+      }
+    })
   }
 
   return (

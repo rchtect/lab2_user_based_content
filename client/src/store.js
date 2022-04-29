@@ -1,6 +1,6 @@
 import { configureStore } from "@reduxjs/toolkit";
 import userSlice from "./features/userSlice";
-import appApi from "./services/appAPI";
+import appApi from "./services/appApi";
 import storage from "redux-persist/lib/storage";
 import { combineReducers } from "redux";
 import { persistReducer } from "redux-persist";
@@ -17,10 +17,10 @@ const persistConfig = {
   blackList: [appApi.reducerPath],
 };
 
-const perstedUser = persistReducer(persistConfig, reducer);
+const persistedReducer = persistReducer(persistConfig, reducer);
 
 const store = configureStore({
-  reducer: perstedUser,
+  reducer: persistedReducer,
   middleware: [thunk, appApi.middleware],
 });
 

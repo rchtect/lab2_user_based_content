@@ -10,7 +10,7 @@ function Sidebar() {
         </li>
         {rooms.map((room, index) => (
           <li key={index}>
-            <a>{room}</a>
+            <a href="/#">{room}</a>
           </li>
         ))}
         <li class="menu-title">
