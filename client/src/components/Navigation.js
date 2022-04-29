@@ -60,7 +60,7 @@ function Navigation() {
           <a class="btn btn-ghost normal-case text-xl">eChat</a>
         </Link>
       </div>
-      <div class="navbar-end">
+      <div class="navbar-end hidden">
         <button class="btn btn-ghost btn-circle">
           <svg
             xmlns="http://www.w3.org/2000/svg"

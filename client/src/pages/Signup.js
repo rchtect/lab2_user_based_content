@@ -4,6 +4,7 @@ import { useState } from "react";
 
 function handleSignup(e) {
   e.preventDefault();
+  console.log("fuck")
 }
 
 function Signup() {
@@ -22,7 +23,7 @@ function Signup() {
               et a id nisi.
             </p>
           </div>
-          <div
+          <form
             class="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-base-100"
             onSubmit={handleSignup}
           >
@@ -83,7 +84,7 @@ function Signup() {
                 </button>
               </div>
             </div>
-          </div>
+          </form>
         </div>
       </div>
     </div>

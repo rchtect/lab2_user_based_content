@@ -1,7 +1,15 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { useState } from "react";
 
 function Login() {
+  const [email, putEmail] = useState("");
+  const [password, putPassword] = useState("");
+
+  function handleLogin(e) {
+    e.preventDefault();
+  }
+
   return (
     <div>
       <div class="hero min-h-screen bg-base-200">
@@ -14,7 +22,10 @@ function Login() {
               et a id nisi.
             </p>
           </div>
-          <div class="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
+          <form
+            class="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-base-100"
+            onSubmit={handleLogin}
+          >
             <div class="card-body">
               <div class="form-control">
                 <label class="label">
@@ -24,6 +35,8 @@ function Login() {
                   type="text"
                   placeholder="isaaq@dev.io"
                   class="input input-bordered"
+                  onChange={(e) => putEmail(e.target.value)}
+                  value={email}
                   required
                 />
               </div>
@@ -35,6 +48,8 @@ function Login() {
                   type="password"
                   placeholder="password"
                   class="input input-bordered"
+                  onChange={(e) => putPassword(e.target.value)}
+                  value={password}
                   required
                 />
                 <label class="label">
@@ -57,7 +72,7 @@ function Login() {
                 </button>
               </div>
             </div>
-          </div>
+          </form>
         </div>
       </div>
     </div>

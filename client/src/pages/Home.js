@@ -5,16 +5,16 @@ function Home() {
   return (
     <div className=" flex content-center justify-center flex-col flex-wrap font-sans">
       <p className="text-[#FF0083] mt-10 text-lg content-center justify-center flex">
-        Echat - LIMITED BETA RELEASE
+        eChat - LIMITED BETA RELEASE
       </p>
       <div>
         <p className=" text-white text-6xl mt-4">
-          The chat platform for the future
+          The chat platform of the future
         </p>
       </div>
       <div className="">
         <p className="text-[#969696] content-center justify-center flex mt-4">
-          Echat connects you to friends, Echat's where it happens
+          eChat connects you to friends, eChat is where it happens
         </p>
       </div>
       <div className="content-center justify-center flex mt-40">
