@@ -7,7 +7,7 @@ function Login() {
   const [email, putEmail] = useState("");
   const [password, putPassword] = useState("");
   const navigate = useNavigate();
-  const [loginUser,{isloading, error}] = useLoginUserMutation
+  const [loginUser, { isLoading, error }] = useLoginUserMutation();
   function handleLogin(e) {
     e.preventDefault();
 
