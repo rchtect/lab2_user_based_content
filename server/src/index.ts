@@ -20,7 +20,7 @@ const myStrategy = passportLocal.Strategy;
 dotenv.config();
 mongoose.connect(`${process.env.ACCESS_URL}`, (err) => {
   if (err) throw err;
-  console.log("Connected To Mongo");
+  console.log("Connected To MongoDB");
 });
 
 // Middleware
