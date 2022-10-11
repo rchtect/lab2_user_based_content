@@ -1,4 +1,4 @@
-# Lab 2: Userbased content - eChat
+# Lab 2: Userbased content - ePost
 
 ## Client
 
@@ -13,3 +13,7 @@ Run `npm i` to install necessary node modules.
 Run `npm start` to run the server with NODE
 
 run `npm dev` to run the server using NODEMON
+
+## Misc
+
+Port: 8080
